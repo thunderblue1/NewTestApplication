@@ -40,6 +40,8 @@ jobs:
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
+        with:
+          name: java-app
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -49,3 +51,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E901FB9E19A14EB4A2283DCEAFE97982 }}
           package: '*.war'
+
