@@ -1,0 +1,3 @@
+logging:
+  level:
+    com.gcu.test.controllers: DEBUG;

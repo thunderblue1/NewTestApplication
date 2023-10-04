@@ -11,7 +11,11 @@ public class AboutController {
 	
 	@RequestMapping({"/","about"})
 	public String index() {
-		logger.info("The about page is logged.");
+		logger.info("Method: index, Entering method for route / and about. Loading about page.");
+		logger.debug("Method: index, Testing Debug level for logger.");
+		logger.warn("Method: index,  Testing Warn level for logger.");
+		logger.error("Method: index,  Testing Error level for logger.");
+		logger.info("Method: index, Exiting method for route / and about. Loading about page.");
 		return "about.html";
 	}
 }
